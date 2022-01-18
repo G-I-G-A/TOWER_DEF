@@ -5,7 +5,7 @@ using namespace std;
 const sf::Time Game::TimePerFrame = sf::seconds(1.f/60.f);
 
 Game::Game()
-: Window(sf::VideoMode(1600, 900), "Your Awesome Game!")
+: MainWindow(sf::VideoMode(1600, 900), "Your Awesome Game!")
 {
 }
 
@@ -16,7 +16,7 @@ void Game::Run()
     sf::Clock clock;
     sf::Time timeSinceLastUpdate = sf::Time::Zero;
 
-    while (Window.isOpen())
+    while (MainWindow.isOpen())
     {
         timeSinceLastUpdate += clock.restart();
         while (timeSinceLastUpdate > TimePerFrame)
@@ -33,7 +33,7 @@ void Game::processEvents()
 {
     sf::Event event{};
 
-    while (Window.pollEvent(event))
+    while (MainWindow.pollEvent(event))
     {
         switch (event.type)
         {
@@ -44,7 +44,7 @@ void Game::processEvents()
                 handlePlayerInput(event.key.code, false);
                 break;
             case sf::Event::Closed:
-                Window.close();
+                MainWindow.close();
                 break;
             default:
                 break;
@@ -61,13 +61,17 @@ void Game::update(sf::Time deltaTime)
 
 void Game::render()
 {
-    Window.clear();
-    Window.draw(RenderField::grassSprite);
-    Window.draw(RenderField::dirtSprite);
-    Window.draw(RenderField::waterSprite);
-    // TODO: Draw your objects here
+    MainWindow.clear();
 
-    Window.display();
+    for(unsigned long long i = 0; i < RenderField::allSprites.size(); ++i) {
+        MainWindow.draw(RenderField::allSprites[i]);
+    }
+
+//    MainWindow.draw(RenderField::grassSprite);
+//    MainWindow.draw(RenderField::dirtSprite);
+//    MainWindow.draw(RenderField::waterSprite);
+
+    MainWindow.display();
 }
 
 void Game::handlePlayerInput(sf::Keyboard::Key key, bool isPressed)

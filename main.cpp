@@ -7,10 +7,10 @@ using namespace std;
 
 int main()
 {
+    //RenderField map;
+    //map.setSpriteOnMap();
     Field field;
     field.getTilesFromFile();
-    RenderField map;
-    map.setSpriteOnMap();
     Game game;
     game.Run();
     return (0);

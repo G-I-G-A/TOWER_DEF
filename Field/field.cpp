@@ -18,7 +18,9 @@ void Field::getTilesFromFile()
     if (tile.is_open()) {
         while (getline(tile,lineR)) {
             for (int i = 0; lineR[i] != 0; ++i) {
-                allTiles.push_back(lineR[i]); }
+                allTiles.push_back(lineR[i]);
+            }
+            nbLines++;
         }
         tile.close();
     }
@@ -26,12 +28,26 @@ void Field::getTilesFromFile()
 //                cout << allTiles[i] << " ";
 //                cout.flush();
 //    }
+    checkPutTower();
 }
 
 void Field::checkPutTower() {
     for (unsigned long long i = 0; i < allTiles.size(); i++) {
+
         if (allTiles[i] == 'D') {
-            // fonction pour poser
+            map.setSpriteOnMap(1, indexLines, indexColumns);
+        } else if (allTiles[i] == 'G') {
+            map.setSpriteOnMap(2, indexLines, indexColumns);
+        } else if (allTiles[i] == 'W') {
+            map.setSpriteOnMap(3, indexLines, indexColumns);
+        } else {
+            cerr << "WARNING WRONG LETTER !";
+        }
+        indexColumns++;
+
+        if (indexColumns == allTiles.size() / nbLines) {
+            indexLines++;
+            indexColumns = 0;
         }
     }
 }

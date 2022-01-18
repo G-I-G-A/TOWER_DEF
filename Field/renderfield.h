@@ -10,14 +10,16 @@ public:
     RenderField();
     ~RenderField();
 
-    void setSpriteOnMap();
+    void setSpriteOnMap(int type, int lines, int columns);
 
     static sf::Sprite grassSprite;
     static sf::Sprite dirtSprite;
     static sf::Sprite waterSprite;
 
+    static std::vector<sf::Sprite> allSprites;
+
 protected:
-    sf::Texture texture;
+     sf::Texture texture;
 };
 
 #endif // RENDERFIELD_H

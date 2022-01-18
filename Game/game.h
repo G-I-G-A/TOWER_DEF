@@ -16,7 +16,7 @@ public:
     void render();
     void handlePlayerInput(sf::Keyboard::Key key, bool isPressed);
 
-    sf::RenderWindow Window;
+    sf::RenderWindow MainWindow;
 
 protected:
     static const sf::Time TimePerFrame;
