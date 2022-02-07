@@ -23,9 +23,33 @@ SOURCES += \
         Field/field.cpp \
         Field/renderfield.cpp \
         Game/game.cpp \
+        Tower/attacktower.cpp \
+        Tower/canontower.cpp \
+        Tower/freezetower.cpp \
+        Tower/freezetower.cpp \
+        Tower/guntower.cpp \
+        Tower/machineguntower.cpp \
+        Tower/maintower.cpp \
+        Tower/poisontower.cpp \
+        Tower/poisontower.cpp \
+        Tower/tower.cpp \
+        Tower/tower.cpp \
+        Tower/ultimetower.cpp \
         main.cpp
 
 HEADERS += \
     Field/field.h \
     Field/renderfield.h \
-    Game/game.h
+    Game/game.h \
+    Tower/attacktower.h \
+    Tower/canontower.h \
+    Tower/freezetower.h \
+    Tower/freezetower.h \
+    Tower/guntower.h \
+    Tower/machineguntower.h \
+    Tower/maintower.h \
+    Tower/poisontower.h \
+    Tower/poisontower.h \
+    Tower/tower.h \
+    Tower/tower.h \
+    Tower/ultimetower.h

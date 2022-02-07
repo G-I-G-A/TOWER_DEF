@@ -16,7 +16,7 @@ void RenderField::setSpriteOnMap(int type, int lines, int columns) {
 
     std::cout << "line: " << lines << "\t column: " << columns << "\n";
 
-    texture.loadFromFile("C:/Qt/Projects/TOWERDEF/Assets/Background/tileset.png");
+    texture.loadFromFile("C:/Users/julie/Documents/Exos/TOWER_DEF/Assets/Background/tileset.png");
 
     switch (type) {
     case 1:

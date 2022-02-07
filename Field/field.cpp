@@ -13,7 +13,7 @@ void Field::getTilesFromFile()
     string lineR;
     ifstream tile;
 
-    tile.open ("C:/Qt/Projects/TOWERDEF/Assets/ExternFiles/setupField.txt");
+    tile.open ("C:/Users/julie/Documents/Exos/TOWER_DEF/Assets/ExternFiles/setupField.txt");
 
     if (tile.is_open()) {
         while (getline(tile,lineR)) {
