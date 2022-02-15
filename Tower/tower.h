@@ -17,6 +17,8 @@ public:
     virtual void upLevel(int level, int levelMax);
     virtual void setPosition(std::vector<float> position);
 
+    enum class towers {attackTower, canonTower, freezeTower, gunTower, poisonTower};
+
     //implementer un draw de sprite
 };
 

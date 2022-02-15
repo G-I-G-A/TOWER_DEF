@@ -5,7 +5,7 @@ gunTower::gunTower()
     power = 2;
     cost = 300;
     range = 20.0f;
-    speed = 3.0f;
+    speedHit = 3.0f;
     levelMax = 10;
     description = 'd';
     loadTexture();
@@ -14,11 +14,11 @@ gunTower::gunTower()
 int gunTower::getCost(){ return cost;}
 int gunTower::getPower(){ return power;}
 int gunTower::getLevelMax(){ return levelMax;}
-float gunTower::getSpeed(){ return speed;}
+float gunTower::getSpeedHit(){ return speedHit;}
 float gunTower::getRange(){ return range;}
 char gunTower::getDescrption(){ return description;}
 
 void gunTower::loadTexture(){
-    //texture = ;
+    texture.loadFromFile("C:/Users/julie/Documents/Exos/TOWER_DEF/Assets/Towers/gun.png");
     gunT.setTexture(texture);
 }

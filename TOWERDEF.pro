@@ -23,6 +23,7 @@ SOURCES += \
         Field/field.cpp \
         Field/renderfield.cpp \
         Game/game.cpp \
+        Monster/monster.cpp \
         Tower/attacktower.cpp \
         Tower/canontower.cpp \
         Tower/freezetower.cpp \
@@ -41,6 +42,7 @@ HEADERS += \
     Field/field.h \
     Field/renderfield.h \
     Game/game.h \
+    Monster/monster.h \
     Tower/attacktower.h \
     Tower/canontower.h \
     Tower/freezetower.h \

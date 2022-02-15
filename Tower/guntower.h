@@ -13,7 +13,7 @@ public:
     int getPower();
     int getLevelMax();
     float getRange();
-    float getSpeed();
+    float getSpeedHit();
     int getCost();
     char getDescrption();
 
@@ -22,7 +22,7 @@ protected:
     int power;
     int cost;
     float range;
-    float speed;
+    float speedHit;
     int levelMax;
     char description;
     sf::Texture texture;
